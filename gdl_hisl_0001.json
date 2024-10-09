@@ -1,0 +1,46 @@
+{
+    "GuidelineID":"hisl_0001",
+    "GuidelineTitle":"Usage of Abs block",
+    "CheckID":"mathworks.hism.hisl_0001",
+    "Domain":[
+        "Simulink"
+    ],
+    "InspectionTarget":[
+        "Abs"
+    ],
+    "ConfigParam":[
+        "SaturateOnIntegerOverflow"
+    ],
+    "Reference":[
+        "IEC 61508-3, Table A.3 (3) 'Language subset'",
+        "IEC 61508-3, Table A.4 (3) 'Defensive programming'",
+        "IEC 61508-3, Table A.3 (2) 'Strongly typed programming language’",
+        "IEC 61508-3, Table B.8 (3) 'Control Flow Analysis'",
+        "IEC 62304, 5.5.3 - Software Unit acceptance criteria",
+        "ISO 26262-6, Table 1 (1b) 'Use of language subsets'",
+        "ISO 26262-6, Table 1 (1d) 'Use of defensive implementation techniques'",
+        "ISO 26262-6, Table 7 (1f) 'Control flow analysis'",
+        "EN 50128, Table A.4 (11) 'Language Subset'",
+        "EN 50128, Table A.3 (1) 'Defensive Programming'",
+        "EN 50128, Table A.4 (8) 'Strongly Typed Programming Language'",
+        "EN 50128, Table A.19 (3) 'Control Flow Analysis'",
+        "DO-331, Section MB.6.3.2.d 'Low-level requirements are verifiable'",
+        "DO-331, Section MB.6.3.2.g – 'Algorithms are accurate'",
+        "MISRA C:2012, Dir 4.1",
+        "INT32-C. Ensure that operations on signed integers do not result in overflow"
+    ],
+    "Rule":[
+        {
+            "SubID":"a",
+            "RuleText":"Avoid Boolean and unsigned data types as inputs to the Abs block.",
+            "Rationale":"Support generation of traceable code."
+        },
+        {
+            "SubID":"b",
+            "RuleText":"Select block parameter Saturate on integer overflow.",
+            "Rationale":"Achieve consistent and expected behavior of model simulation and generated code."
+        }
+    ],
+    "Category":"Simulink Block Considerations",
+    "Subcategory":"Math Operations"
+}
